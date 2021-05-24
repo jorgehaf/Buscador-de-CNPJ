@@ -8,13 +8,13 @@ var view = (function () {
 
     function init() {
         var infosCNPJ,
-            arrayInfosPrincipais = {
+            objInfosPrincipais = {
                 razaoSocial: '',
                 cnpj: '',
                 municipio: '',
                 uf: ''
             },
-            arrayInfosDetalhes = {
+            objInfosDetalhes = {
                 razaoSocial: '',
                 principalAtividade: '',
                 situacao: '',
@@ -154,40 +154,40 @@ var view = (function () {
                     telefone = 'Não encontrado.',
             } = retorno;
 
-            arrayInfosPrincipais.razaoSocial = nome;
-            arrayInfosPrincipais.cnpj = cnpj;
-            arrayInfosPrincipais.municipio = municipio;
-            arrayInfosPrincipais.uf = uf;
+            objInfosPrincipais.razaoSocial = nome;
+            objInfosPrincipais.cnpj = cnpj;
+            objInfosPrincipais.municipio = municipio;
+            objInfosPrincipais.uf = uf;
 
-            arrayInfosDetalhes.razaoSocial = nome;
-            arrayInfosDetalhes.principalAtividade = principalAtividade;
-            arrayInfosDetalhes.situacao = situacao;
-            arrayInfosDetalhes.presidente = nomePresidente;
-            arrayInfosDetalhes.abertura = abertura;
-            arrayInfosDetalhes.email = email;
-            arrayInfosDetalhes.telefone = telefone;
-            arrayInfosDetalhes.municipio = municipio;
-            arrayInfosDetalhes.uf = uf;
+            objInfosDetalhes.razaoSocial = nome;
+            objInfosDetalhes.principalAtividade = principalAtividade;
+            objInfosDetalhes.situacao = situacao;
+            objInfosDetalhes.presidente = nomePresidente;
+            objInfosDetalhes.abertura = abertura;
+            objInfosDetalhes.email = email;
+            objInfosDetalhes.telefone = telefone;
+            objInfosDetalhes.municipio = municipio;
+            objInfosDetalhes.uf = uf;
         }
 
         function preencheDadosIniciais() {
-            $('#razaoSocialPrincipal').val(arrayInfosPrincipais.razaoSocial)
-            $('#cnpjPrincipal').val(arrayInfosPrincipais.cnpj)
-            $('#municipioPrincipal').val(arrayInfosPrincipais.municipio)
-            $('#ufPrincipal').val(arrayInfosPrincipais.uf)
+            $('#razaoSocialPrincipal').val(objInfosPrincipais.razaoSocial)
+            $('#cnpjPrincipal').val(objInfosPrincipais.cnpj)
+            $('#municipioPrincipal').val(objInfosPrincipais.municipio)
+            $('#ufPrincipal').val(objInfosPrincipais.uf)
 
         }
 
         function preencheDadosDetalhes() {
-            $('#razaoSocialDivDetalhes').val(arrayInfosDetalhes.razaoSocial)
-            $('#principalAtividadeDivDetalhes').val(arrayInfosDetalhes.principalAtividade)
-            $('#situacaoDivDetalhes').val(arrayInfosDetalhes.situacao)
-            $('#presidenteDivDetalhes').val(arrayInfosDetalhes.presidente)
-            $('#aberturaDivDetalhes').val(arrayInfosDetalhes.abertura)
-            $('#emailDivDetalhes').val(arrayInfosDetalhes.email)
-            $('#telefoneDivDetalhes').val(arrayInfosDetalhes.telefone)
-            $('#municipioDivDetalhes').val(arrayInfosDetalhes.municipio)
-            $('#ufDivDetalhes').val(arrayInfosDetalhes.uf)
+            $('#razaoSocialDivDetalhes').val(objInfosDetalhes.razaoSocial)
+            $('#principalAtividadeDivDetalhes').val(objInfosDetalhes.principalAtividade)
+            $('#situacaoDivDetalhes').val(objInfosDetalhes.situacao)
+            $('#presidenteDivDetalhes').val(objInfosDetalhes.presidente)
+            $('#aberturaDivDetalhes').val(objInfosDetalhes.abertura)
+            $('#emailDivDetalhes').val(objInfosDetalhes.email)
+            $('#telefoneDivDetalhes').val(objInfosDetalhes.telefone)
+            $('#municipioDivDetalhes').val(objInfosDetalhes.municipio)
+            $('#ufDivDetalhes').val(objInfosDetalhes.uf)
         }
 
         return {
